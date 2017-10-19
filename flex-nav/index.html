@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Navigation</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/flexnav.css">
+</head>
+<body>
+	<div class="wrapper">
+
+		<header class="top">
+			<h1>Flexible navigation with re-ordering content on mobile</h1>
+		</header>
+
+		<!-- Navigation -->
+		<nav class="flex-nav">
+			<a href="#" class="toggleNav">☰ Menu</a>
+			<ul>
+				<li><a href="">Item 01</a></li>
+				<li><a href="">Item 02</a></li>
+				<li><a href="">Item 03</a></li>
+				<li><a href="">Item 04</a></li>
+				<li><a href="">Item 05</a></li>
+				<li><a href="">Item 06</a></li>
+				<li class="social">
+					<a href=""><i class="fa fa-twitter"></i></a>
+				</li>
+				<li class="social">
+					<a href=""><i class="fa fa-linkedin"></i></a>
+				</li>
+				<li class="social">
+					<a href=""><i class="fa fa-stack-overflow"></i></a>
+				</li>
+				<li class="social">
+					<a href=""><i class="fa fa-github"></i></a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Hero area -->
+		<section class="hero">
+			<img src="http://lorempixel.com/1000/600/abstract" alt="">
+		</section>
+
+		<section class="details">
+			<p>Welcome to our blog about web development.</p>
+			<p>Sign up today to get latest tutorials right in your inbox!</p>
+		</section>
+
+		<section class="signup">
+			<form action="" class="signup">
+				<input type="text" placeholder="Your Name">
+				<input type="email" placeholder="Email Address">
+				<input type="submit" value="Sign me up!">
+			</form>
+		</section>
+
+		<footer> 
+			<p>&copy; Blog Name</p>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('.toggleNav').on('click', function() {
+				$('.flex-nav ul').toggleClass('open');
+				/*
+				Adds display: block to ul, flexbox items displayed as block elements too
+				$('.flex-nav ul').slideToggle();
+				*/
+			});
+		});
+	</script>
+</body>
+</html>
