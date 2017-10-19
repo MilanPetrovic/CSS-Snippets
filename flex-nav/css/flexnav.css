@@ -82,7 +82,7 @@ header {
 	flex: 1;
 }
 
-/* Flex form*/
+/* Flexible form*/
 section.signup {
 	display: -webkit-box;
 	display: -ms-flexbox;
